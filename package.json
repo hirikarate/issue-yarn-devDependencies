@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-test",
+  "version": "1.0.0",
+  "description": "This repository illustrates the issue that Yarn installs devDependencies of dependencies (https://github.com/yarnpkg/yarn/issues/6651)",
+  "private": true,
+  "workspaces": {
+        "packages": [
+            "packages/*"
+        ],
+        "nohoist": [
+            "**/@angular*",
+            "**/@angular*/**",
+            "**/tslint",
+            "**/tslib",
+            "**/tsutils",
+            "**/typescript"
+        ]
+    }
+}
